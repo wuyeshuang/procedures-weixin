@@ -1,0 +1,65 @@
+/**index.wxss**/
+swiper {
+	height: 340rpx;
+}
+
+.banner {
+	width: 750rpx;
+	height: 340rpx;
+}
+.index-nav{
+	background: #fff;
+	display: flex;
+	flex-wrap: wrap;
+/* 	border-left: 1px #ccc solid;
+	border-top: 1px #ccc solid;
+	box-sizing: border-box; */
+}
+.index-nav .nav-item {
+	width: 33.33%;
+	height: 250rpx;
+	border-bottom: 1rpx #ccc solid;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 28rpx;
+	position: relative;
+}
+.index-nav .nav-item::after{
+	content: "";
+	position: absolute;
+	width: 1rpx;
+	height: 100%;
+	right: 0;
+	top: 0;
+	background: #ccc;
+}
+.index-nav .nav-item:nth-child(3n)::after{
+	background: none;
+}
+.index-nav .nav-item text{
+	margin: 10rpx;
+}
+.index-nav image {
+	width: 80rpx;
+	height: 80rpx;
+}
+
+
+.index-enter{
+	margin: 20rpx 0 0 0;
+	background: #fff;
+	display: flex;
+	justify-content: space-between;
+	padding: 20rpx 40rpx;
+}
+.index-enter image{
+	 width: 320rpx;
+	 height: 178rpx;
+}
+
+page{
+	background: #f1f1f1;
+}

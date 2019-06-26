@@ -1,0 +1,69 @@
+<!--index.wxml-->
+
+<!-- 首页轮播图 -->
+<view>
+	<swiper indicator-dots='true' autoplay='true' interval='5000' circular='true'>
+<!-- 		<swiper-item>
+			<image src='../../images/banner1.jpg' class='banner'></image>
+		</swiper-item>
+		<swiper-item>
+			<image src='../../images/banner2.jpg' class='banner'></image>
+		</swiper-item> -->
+		<swiper-item wx:for="{{ sliderList }}" wx:key="id">
+			<image src='{{ item.image }}' class='banner' lazy-load></image>
+		</swiper-item>
+	</swiper>
+</view>
+<!-- END -->
+
+<!-- 首页导航分区 -->
+<view class="index-nav">
+	<navigator wx:for="{{categories}}" wx:key="id" class="nav-item" url="/pages/shoplist/shoplist?ca={{ item.id }}&name={{ item.name }}">
+		<image src="{{ item.icon }}" lazy-load ></image>
+		<text>{{ item.name }}</text>
+	</navigator>
+	<!-- <navigator class="nav-item">
+		<image src="../../images/icon2.jpg"></image>
+		<text>美食</text>
+	</navigator>
+	<navigator class="nav-item">
+		<image src="../../images/icon3.jpg"></image>
+		<text>美食</text>
+	</navigator>
+	<navigator class="nav-item">
+		<image src="../../images/icon4.jpg"></image>
+		<text>美食</text>
+	</navigator>
+	<navigator class="nav-item">
+		<image src="../../images/icon5.jpg"></image>
+		<text>美食</text>
+	</navigator>
+	<navigator class="nav-item">
+		<image src="../../images/icon6.jpg"></image>
+		<text>美食</text>
+	</navigator>
+	<navigator class="nav-item">
+		<image src="../../images/icon7.jpg"></image>
+		<text>美食</text>
+	</navigator>
+	<navigator class="nav-item">
+		<image src="../../images/icon8.jpg"></image>
+		<text>美食</text>
+	</navigator>
+	<navigator class="nav-item">
+		<image src="../../images/icon9.jpg"></image>
+		<text>美食</text>
+	</navigator> -->
+</view>
+<!-- END -->
+
+<!-- 首页入口分区 -->
+<view class="index-enter">
+	<navigator>
+		<image src="../../images/link-01.png"></image>
+	</navigator>
+	<navigator>
+		<image src="../../images/link-02.png"></image>
+	</navigator>
+</view>
+<!-- END -->
